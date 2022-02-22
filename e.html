@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="e.css" />
+
+    <script type="text/javascript" src="e.js"></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="p-3 bg-container">
+      <h1 class="heading mb-4">JSON Parsing</h1>
+      <p class="request-url-text">
+        REQUEST URL:
+        <span class="request-url"
+          >https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=data&format=json</span
+        >
+      </p>
+      <button
+        class="mt-3 p-2 button"
+        id="sendGetRequestBtn"
+        onclick="sendGetRequestBtn()"
+      >
+        Send Get Request
+      </button>
+      <hr />
+      <div class="p-2 mt-4">
+        <p>Title</p>
+        <p id="title"></p>
+        <p class="d-none" id="loading">Loading....</p>
+      </div>
+      <hr />
+      <div class="p-2 mt-4">
+        <p>NumberOfPages</p>
+        <p id="num_pages"></p>
+      </div>
+      <div class="p-2 mt-4" id="im">
+        <p>Image</p>
+        <img id="images" />
+      </div>
+    </div>
+  </body>
+</html>
